@@ -11,6 +11,7 @@ class Song(Model):
     created_at = DateTimeField(default=datetime.datetime.now)
     class Meta:
         database = DATABASE
+        
 def initialize():
     DATABASE.connect()
     DATABASE.create_tables([Song], safe=True)
